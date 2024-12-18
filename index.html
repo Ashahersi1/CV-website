@@ -1,72 +1,196 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name - CV</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-    <!-- Header Section -->
-    <div class="header">
-      <h1>Asha Hersi</h1>
-      <p>Contact: asha.hersi@accenture.com | Phone: +442736546352 | 
-        <a href="https://yourgithubusername.github.io/your-cv/">Website CV</a>
-      </p>
-    </div>
-
-    <!-- Profile Section -->
-    <section class="profile">
-      <h2 class="section-title">Profile</h2>
-      <p>I am a highly motivated, hardworking, and open-minded individual with a strong passion for problem-solving and delivering effective solutions. I have experience in administrative tasks and technical skills, along with a background in both politics and AI & Data Science.  </p>
-      <p>I am currently working at Accenture as a Data Consultant, apart of the graduate program. I have been enhanced my Python programming skills through hands-on experience as well as contributing in internal projects leveraging large language models (LLMs) to analyse and process cyber vulnerabilities.Through this work, I gained valuable knowledge of cloud technologies, earning the AWS Cloud Practitioner Certification.<p>
-    </section>
-
-    <!-- Education Section -->
-    <section>
-      <h2 class="section-title">Education</h2>
-      <ul>
-        <li><strong>University of East London</strong> | MSc AI & Data Science | Oct 2023 – Present<br>
-          Modules: Software Engineering, Machine Learning, AI and Machine Vision. <em>Expected Grade: 1:1</em>
-        </li>
-        <li><strong>City, University of London</strong> | International Politics BSc | Sep 2019 – July 2023<br>
-          Modules: Political Risk Analysis, Security Studies, Human Rights and Social Change. <em>Obtained: 2:1</em>
-        </li>
-      </ul>
-    </section>
-
-    <!-- Experience Section -->
-    <section>
-      <h2 class="section-title">Experience</h2>
-      <ul>
-        <li>
-            <strong>UKSTS Accenture </strong> | Data Consultant | Current Role<br>
-            Worked on internal projects utilising large language models (LLMs) to analyse and process cyber vulnerabilities. Achieved AWS Certified Cloud Practitioner (CCP) certification. 
-          </li>
-
-          <strong>Lift Islington Youth</strong> | Customer Service Assistant | Nov 2022 – Present<br>
-          Assisted customers promptly and efficiently both in person and over the phone, ensuring smooth bookings while multitasking in a fast-paced environment.
-        </li>
-        <li>
-          <strong>FDM Group</strong> | Consultant | Oct 2022 – Jan 2023<br>
-          Collaborated with teams to improve graduate transition to hybrid work. Recommended optimized support plans, leading to impactful company changes.
-        </li>
-    
-      </ul>
-    </section>
-
-    <!-- Skills Section -->
-    <section>
-      <h2 class="section-title">Skills</h2>
-      <ul>
-        <li>Problem-Solving</li>
-        <li>Critical Thinking</li>
-        <li>Time Management</li>
-        <li>Excel, Python, PySpark, HTML, Matlab, AWS</li>  
-      </ul>
-    </section>
-
+<html>
+  <head>
+    <title>Responsive resume / CV template idea with CSS and JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta name="description" content="Responsive Resume / CV webpage template sample chronological format example showing profile, skills, education, experience, hobbies, interest and socila made with HTML, SVG, CSS and JQuery; featuring standard and hover CSS keyframes animation and on click class toggle.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Amatica+SC|Bungee+Outline|Bungee+Shade|Ewert|Fredericka+the+Great|Kumar+One+Outline|Ultra" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"></head>
+    <link rel="stylesheet" href="updated.css">
+  <!--start of nav menu-->
+ 
+<body>  
+  <!--everything goes in here-->
+<div class="container">
+  <!--page header-->
+  <div class="page-header">
+    <!--add your name below -->
+    <h1> NAME </h1>
+    <!-- add your contact details (email,number and cv link)-->
+      <p id="h1ptag"> Email, Number, CV link </p>
   </div>
-</body>
+  <!--end of page header-->
+  
+  <!--start of nav menu-->
+  <nav>
+    <ul class="showing">
+      <li class="nav-item"><a href="#profilesectionh3id">Profile</a></li>
+    
+      <li class="nav-item"><a href="#educationsectionh3id">Skills </a></li>
+      
+       <li class="nav-item"><a href="#techskillsh3id">Education and experince</a></li>
+    </ul>
+    <div class="handle">Menu</div>
+  </nav>
+  <!--end of nav menu-->
+  
+  
+  <!--start of main content-->
+  <div class="main-content">
+    <!--svg-->
+           
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: CorelDRAW -->
+<div class="svgbrain">
+
+  
+</div>
+<!--end of brain svg-->
+   
+  <div class="profilesectiondiv" id="profileid">
+    <section class="sectiontitle">
+      <h3 id="profilesectionh3id">PROFILE</h3>
+      
+      <!-- Add a profile talk a bit abut yourself here  -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut condimentum, turpis at faucibus ornare, sem enim scelerisque mauris, a pulvinar ante eros sed ligula. <br>Sed gravida et ligula eget faucibus. Sed dictum, neque aliquam gravida convallis, ex dolor imperdiet urna, id pretium ante arcu eget dolor. </p>
+    </section>
+ </div>
+        <div class="skillssectiondiv" id="techskills">
+      <section class="sectiontitle">
+        <h3 id="techskillsh3id">SKILLS</h3>
+        
+        <div class="firstchart">
+          <svg width="100" height="100" stroke-linecap="round">
+            <circle id="innerc1" r="35" cx="50" cy="50" />         
+<circle class="expertp" id="outerc1" r="40" cx="50" cy="50" />
+       <!-- Add the skills which are suitable for this section -->
+
+       <p class="expertp level">Beginner</p>
+       <!-- add the key skills here -->
+      <p class="expertp">this, this, the other</p>
+</svg>
+                  
+</div>
+<section id="skills">
+    <div class="secondchart">
+      <!-- Proficient Skill Section with SVG circle chart -->
+      <svg width="100" height="100" stroke-linecap="round">
+        <circle id="innerc2" r="35" cx="50" cy="50" />
+        <circle id="outerc2" r="40" cx="50" cy="50" />
+      </svg>
+      <!-- Proficient Level -->
+      <p class="expertp level">Proficient</p>
+      <!-- add the key skills here -->
+      <p class="expertp">this, this, the other</p>
+    </div>
+  
+    <div class="thirdchart">
+      <!-- Expert Skill Section with SVG circle chart -->
+      <svg width="100" height="100" stroke-linecap="round">
+        <circle id="innerc3" r="35" cx="50" cy="50" />
+        <circle id="outerc3" r="40" cx="50" cy="50" />
+      </svg>
+      <!-- Expert Level -->
+      <p class="level" id="expertcircle">Expert</p>
+      <!-- add the key skills here -->
+      <p class="expertp1">this, this, the other</p>
+    </div>
+  </section>
+  
+    
+    <div class="educationsectiondiv sectiontitle">
+        <h3 id="educationsectionh3id">EDUCATION and Experience </h3>
+        <section class="timeline">
+           <!-- This section is a timeline of your education,work experinece, Hobbies and interests    -->
+  <ul>
+    <li>
+      <div>
+        <!-- add relevant experieence below -->
+        <time>Year</time>
+        Qualification / Course Type,
+        Institution / University
+      </div>
+    </li>
+     <li>
+      <div>
+        <time>Year</time>
+        Qualification / Course Type,
+        Institution / University
+       </div>
+    </li>
+    <li>
+      <div>
+        <time>Year</time>
+        Qualification / Course Type,
+        Institution / University
+       </div>
+    </li>
+  
+    <li>
+      <div>
+        <time>Year</time>
+        Qualification / Course Type,
+        Institution / University
+       </div>
+    </li>
+    
+    <li>
+      <div>
+        <time>Year</time>
+        Qualification / Course Type,
+        Institution / University
+       </div>
+    </li>
+    
+    <li>
+      <div>
+        <time>Year</time>
+        Qualification / Course Type,
+        Institution / University
+       </div>
+      
+      <li>
+      <div>
+        <time>Year</time>
+        Qualification / Course Type,
+        Institution / University
+       </div>
+    </li>
+    <li>
+      <div>
+        <time>Year</time>
+        Qualification / Course Type,
+        Institution / University
+       </div>
+    </li>
+    
+    <li>
+      <div>
+        <time>Year</time>
+        Qualification / Course Type,
+        Institution / University
+       </div>
+    </li>
+   
+  </ul>
+</section>
+</div>
+<!-- address hobbies and other relevant things-->
+<div class="hobbiessectiondiv">      
+  <section class="sectiontitle"><h3 id="hobbiessectionh3id">Hobbies & Interests</h3>
+  <p>Not camping. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut condimentum, turpis at faucibus ornare, sem enim scelerisque mauris, a pulvinar ante eros sed ligula. Sed gravida et ligula eget faucibus. Sed dictum, neque aliquam gravida convallis, ex dolor imperdiet urna, id pretium ante arcu eget dolor. Sed ac hendrerit ligula. Duis porttitor dolor massa. Fusce blandit quam aliquam, efficitur risus at, venenatis metus. Vestibulum venenatis bibendum ligula egestas dapibus. Aenean quis elit vitae purus porttitor luctus. </p>
+  </section>
+</div>
+
+</div>
+<div> 
+</div>
+  </div>
+  <!--end of main content-->  
+<div class="copyrightetal">
+  <p>&copy; 2024 </p>
+</div>
+  </div></div>
+  </body>
 </html>
