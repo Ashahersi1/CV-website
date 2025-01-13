@@ -9,10 +9,10 @@
 }
 
 body {
-  background: #eaeaea;
+  background: #eaeaea; /* Subtle background to contrast with sections */
   font-size: 14px;
   line-height: 22px;
-  color: #333333;
+  color: #333333; /* Darker text for readability */
 }
 
 .bold {
@@ -31,16 +31,15 @@ body {
   height: auto;
   display: flex;
   margin: 50px auto;
-  flex-wrap: wrap; /* Allow content to wrap for small screens */
 }
 
 .resume .resume_left {
   width: 280px;
-  background: #3a3a3a;
-  color: #ffffff;
+  background: #3a3a3a; /* Professional dark gray */
+  color: #ffffff; /* White text for contrast */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-between; /* Push content apart */
 }
 
 .resume .resume_left .resume_profile {
@@ -71,7 +70,7 @@ body {
 
 .resume .resume_item {
   padding: 25px 0;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc; /* Lighter divider */
 }
 
 .resume .resume_left .resume_item:last-child {
@@ -92,7 +91,7 @@ body {
   width: 35px;
   height: 35px;
   background: #ffffff;
-  color: #3a3a3a;
+  color: #3a3a3a; /* Matches the background */
   border-radius: 50%;
   margin-right: 15px;
   font-size: 16px;
@@ -111,33 +110,36 @@ body {
   color: #cccccc;
 }
 
+/* Updated skills section */
 .resume .resume_left .resume_skills ul {
   padding: 0;
 }
 
 .resume .resume_left .resume_skills ul li {
-  margin-bottom: 15px;
+  margin-bottom: 15px; /* Space between skills */
   font-size: 14px;
-  color: #ffffff;
+  color: #ffffff; /* Matches text color */
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.5; /* Better readability */
 }
 
+/* Social section moved to the bottom */
 .resume .resume_left .resume_social {
-  margin-top: auto;
+  margin-top: auto; /* Pushes the social section to the bottom */
   padding: 25px;
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #cccccc; /* Add a divider above */
 }
 
+/* Right section */
 .resume .resume_right {
   width: 520px;
-  background: #ffffff;
+  background: #ffffff; /* White background for content */
   padding: 25px;
-  color: #333333;
+  color: #333333; /* Dark text for readability */
 }
 
 .resume .resume_right .bold {
-  color: #3a3a3a;
+  color: #3a3a3a; /* Matches left section's dark gray */
 }
 
 .resume .resume_right .resume_work ul,
@@ -173,7 +175,7 @@ body {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  border: 2px solid #3a3a3a;
+  border: 2px solid #3a3a3a; /* Matches the left section */
 }
 
 .resume .resume_right .resume_work ul li:after,
@@ -184,74 +186,11 @@ body {
   left: -21px;
   width: 2px;
   height: 115px;
-  background: #3a3a3a;
+  background: #3a3a3a; /* Matches the left section */
 }
 
+/* General improvements */
 .resume .resume_right .resume_hobby ul li {
   font-size: 14px;
   margin-bottom: 10px;
-}
-
-/* ============================
-   Mobile Responsiveness
-============================ */
-@media screen and (max-width: 768px) {
-  .resume {
-    width: 95%;
-    margin: 20px auto;
-    flex-direction: column; /* Stack sections vertically */
-  }
-
-  .resume .resume_left,
-  .resume .resume_right {
-    width: 100%; /* Take full width */
-  }
-
-  .resume .resume_left {
-    padding: 20px;
-  }
-
-  .resume .resume_left .resume_profile {
-    height: 200px; /* Adjust profile height */
-  }
-
-  .resume .resume_right {
-    padding: 20px;
-  }
-
-  .resume .resume_right ul {
-    padding-left: 20px; /* Reduce indentation */
-  }
-}
-
-@media screen and (max-width: 480px) {
-  body {
-    font-size: 12px;
-    line-height: 20px;
-  }
-
-  .resume .resume_left ul li {
-    flex-direction: column; /* Stack icon and text vertically */
-    align-items: flex-start;
-  }
-
-  .resume .resume_left ul li .icon {
-    margin-bottom: 10px;
-  }
-
-  .resume .resume_right ul li .date {
-    font-size: 14px; /* Adjust date font size */
-  }
-
-  .resume .resume_right ul li .info {
-    margin-bottom: 15px;
-  }
-
-  .resume .resume_left .resume_skills ul li {
-    font-size: 13px; /* Reduce font size for skills */
-  }
-
-  .resume .resume_right .resume_hobby ul li {
-    font-size: 12px; /* Reduce font size for hobbies */
-  }
 }
