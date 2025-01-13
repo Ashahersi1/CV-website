@@ -195,3 +195,51 @@ body {
   margin-bottom: 10px;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .resume {
+    flex-direction: column; /* Stack the sections */
+    width: 100%; /* Full-width for mobile */
+    margin: 20px auto;
+  }
+
+  .resume .resume_left {
+    width: 100%; /* Full-width on small screens */
+    height: auto; /* Auto-adjust height */
+  }
+
+  .resume .resume_right {
+    width: 100%; /* Full-width for right section */
+    padding: 15px; /* Reduce padding */
+  }
+
+  .resume .resume_left .resume_content,
+  .resume .resume_left .resume_social {
+    padding: 15px; /* Adjust padding for small screens */
+  }
+
+  .resume .resume_right ul {
+    padding-left: 20px; /* Less indentation */
+  }
+
+  .resume .resume_right ul li:after {
+    height: 80px; /* Reduce line height for timeline */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 12px; /* Smaller font for extra small screens */
+  }
+
+  .resume .resume_left .resume_skills ul li,
+  .resume .resume_right .resume_hobby ul li {
+    font-size: 12px; /* Smaller text for skills and hobbies */
+  }
+
+  .resume .resume_right ul li:after {
+    height: 60px; /* Further reduce timeline height */
+  }
+}
+
+
