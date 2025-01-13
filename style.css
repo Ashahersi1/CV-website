@@ -9,10 +9,10 @@
 }
 
 body {
-  background: #eaeaea; /* Subtle background to contrast with sections */
+  background: #eaeaea;
   font-size: 14px;
   line-height: 22px;
-  color: #333333; /* Darker text for readability */
+  color: #333333;
 }
 
 .bold {
@@ -31,15 +31,17 @@ body {
   height: auto;
   display: flex;
   margin: 50px auto;
+  flex-wrap: wrap; /* Wrap content on smaller screens */
 }
 
 .resume .resume_left {
   width: 280px;
-  background: #3a3a3a; /* Professional dark gray */
-  color: #ffffff; /* White text for contrast */
+  background: #3a3a3a;
+  color: #ffffff;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Push content apart */
+  justify-content: space-between;
+  flex-shrink: 0;
 }
 
 .resume .resume_left .resume_profile {
@@ -70,7 +72,7 @@ body {
 
 .resume .resume_item {
   padding: 25px 0;
-  border-bottom: 1px solid #cccccc; /* Lighter divider */
+  border-bottom: 1px solid #cccccc;
 }
 
 .resume .resume_left .resume_item:last-child {
@@ -91,7 +93,7 @@ body {
   width: 35px;
   height: 35px;
   background: #ffffff;
-  color: #3a3a3a; /* Matches the background */
+  color: #3a3a3a;
   border-radius: 50%;
   margin-right: 15px;
   font-size: 16px;
@@ -110,36 +112,33 @@ body {
   color: #cccccc;
 }
 
-/* Updated skills section */
 .resume .resume_left .resume_skills ul {
   padding: 0;
 }
 
 .resume .resume_left .resume_skills ul li {
-  margin-bottom: 15px; /* Space between skills */
+  margin-bottom: 15px;
   font-size: 14px;
-  color: #ffffff; /* Matches text color */
+  color: #ffffff;
   font-weight: 500;
-  line-height: 1.5; /* Better readability */
+  line-height: 1.5;
 }
 
-/* Social section moved to the bottom */
 .resume .resume_left .resume_social {
-  margin-top: auto; /* Pushes the social section to the bottom */
+  margin-top: auto;
   padding: 25px;
-  border-top: 1px solid #cccccc; /* Add a divider above */
+  border-top: 1px solid #cccccc;
 }
 
-/* Right section */
 .resume .resume_right {
   width: 520px;
-  background: #ffffff; /* White background for content */
+  background: #ffffff;
   padding: 25px;
-  color: #333333; /* Dark text for readability */
+  color: #333333;
 }
 
 .resume .resume_right .bold {
-  color: #3a3a3a; /* Matches left section's dark gray */
+  color: #3a3a3a;
 }
 
 .resume .resume_right .resume_work ul,
@@ -175,7 +174,7 @@ body {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  border: 2px solid #3a3a3a; /* Matches the left section */
+  border: 2px solid #3a3a3a;
 }
 
 .resume .resume_right .resume_work ul li:after,
@@ -186,11 +185,71 @@ body {
   left: -21px;
   width: 2px;
   height: 115px;
-  background: #3a3a3a; /* Matches the left section */
+  background: #3a3a3a;
 }
 
-/* General improvements */
 .resume .resume_right .resume_hobby ul li {
   font-size: 14px;
   margin-bottom: 10px;
+}
+
+/* ============================
+   Mobile Responsiveness
+============================ */
+@media screen and (max-width: 768px) {
+  .resume {
+    width: 95%;
+    margin: 20px auto;
+    flex-direction: column; /* Stack left and right sections */
+  }
+
+  .resume .resume_left,
+  .resume .resume_right {
+    width: 100%; /* Take full width */
+    flex-wrap: nowrap; /* Avoid horizontal scroll */
+  }
+
+  .resume .resume_left {
+    padding: 15px 20px;
+  }
+
+  .resume .resume_right {
+    padding: 20px 20px;
+  }
+
+  .resume .resume_left .resume_skills ul li {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .resume .resume_left .resume_profile {
+    height: 200px; /* Reduce profile image size */
+  }
+
+  .resume .resume_left ul li {
+    flex-direction: column; /* Stack icon and text */
+    align-items: flex-start;
+  }
+
+  .resume .resume_left ul li .icon {
+    margin-bottom: 10px;
+  }
+
+  .resume .resume_right ul li .date {
+    font-size: 14px; /* Adjust text size */
+  }
+
+  .resume .resume_right ul li .info {
+    margin-bottom: 15px;
+  }
+
+  .resume .resume_right .resume_hobby ul li {
+    font-size: 12px;
+  }
 }
