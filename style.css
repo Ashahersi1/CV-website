@@ -50,7 +50,6 @@ body {
 .resume .resume_left .resume_profile img {
   width: 100%;
   height: 100%;
-  border-radius: 8px; /* Add a slight rounding for aesthetics */
 }
 
 .resume .resume_left .resume_content {
@@ -196,97 +195,111 @@ body {
   margin-bottom: 10px;
 }
 
-/* ================================
-   Media query for mobile screens
-================================ */
+can you please make this mobile responsive even if you have to change how tight the css is
+
+can you add this /* Media query for mobile screens (up to 768px width) */
 @media (max-width: 768px) {
-  /* Adjust the main container to stack vertically */
-  .resume {
-    flex-direction: column; /* Stack left and right panes vertically */
-    width: 90%; /* Make it more fluid */
-    max-width: 100%; /* Use full width of the screen */
-  }
 
-  /* Adjust the left pane to take full width */
-  .resume_left {
-    width: 100%; /* Full width for better readability on mobile */
+    /* Adjust the main container to stack vertically */
+    .resume-container {
+        flex-direction: column; /* Stack left and right panes vertically */
+        max-width: 100%; /* Use full width of the screen */
+        border: none; /* Optional: remove the border for a cleaner look on mobile */
+    }
+
+    /* Adjust the left pane to take full width */
+    .left-pane {
+        width: 100%; /* Full width for better readability on mobile */
+        padding: 20px; 
+        text-align: center; 
+    }
+
+    /* Adjust the right pane to take full width */
+    .right-pane {
+        width: 100%; /* Full width for content */
+        padding: 20px;
+    }
+
+    /* Make the profile image smaller */
+    .profile-img {
+        width: 70px; /* Smaller image for mobile */
+    }
+
+    /* Center the download button and adjust padding */
+    .download-btn {
+        width: 100%; /* Full-width button for easier clicking */
+        text-align: center;
+        padding: 15px;
+    }
+}
+
+.skill-box {
+    background: #ecf6fb;
     padding: 20px;
-    text-align: center; /* Center-align content */
-  }
-
-  /* Adjust the right pane to take full width */
-  .resume_right {
-    width: 100%; /* Full width for content */
-    padding: 20px;
-  }
-
-  /* Make the profile image smaller */
-  .resume_left .resume_profile {
-    height: 150px; /* Smaller height */
-  }
-
-  .resume_left .resume_profile img {
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-  }
-
-  /* Adjust list items in left section */
-  .resume .resume_left ul li {
-    flex-direction: column; /* Stack icon and text */
-    align-items: flex-start;
     text-align: center;
-  }
-
-  .resume .resume_left ul li .icon {
-    margin: 0 auto 10px auto; /* Center-align icons */
-  }
-
-  /* Adjust font sizes for better readability */
-  .bold {
-    font-size: 18px;
-  }
-
-  .semi-bold {
-    font-size: 14px;
-  }
-
-  /* Adjust spacing between sections */
-  .resume .resume_item {
-    padding: 20px 0;
-  }
-
-  .resume_right ul {
-    padding-left: 20px; /* Reduced padding */
-  }
-
-  .resume_right ul li .date {
-    font-size: 14px;
-  }
-
-  .resume_right ul li .info {
-    margin-bottom: 10px;
-  }
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #34495e;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
 }
 
-@media (max-width: 480px) {
-  /* For very small devices */
-  body {
-    font-size: 12px;
-    line-height: 18px;
-  }
-
-  .resume {
-    width: 100%; /* Utilize full screen width */
-    gap: 10px; /* Add some spacing */
-  }
-
-  .resume_left,
-  .resume_right {
-    padding: 15px; /* Compact padding */
-  }
-
-  .resume_left ul li {
-    gap: 5px; /* Reduce spacing between list items */
-  }
+.skill-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: #2980b9;
+    color: white;
 }
+
+/* Experience Section */
+.experience-section {
+    margin-bottom: 30px;
+}
+
+.educationexperience-box {
+    background: #ecf6fb;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.educationexperience-box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.educationexperience-box h3 {
+    font-size: 1.5em;
+    color: #34495e;
+}
+
+.educationexperience-box ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+    color: #2c3e50;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+} 
