@@ -31,7 +31,7 @@ body {
   height: auto;
   display: flex;
   margin: 50px auto;
-  flex-wrap: wrap; /* Wrap content on smaller screens */
+  flex-wrap: wrap; /* Allow content to wrap for small screens */
 }
 
 .resume .resume_left {
@@ -41,7 +41,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex-shrink: 0;
 }
 
 .resume .resume_left .resume_profile {
@@ -200,25 +199,28 @@ body {
   .resume {
     width: 95%;
     margin: 20px auto;
-    flex-direction: column; /* Stack left and right sections */
+    flex-direction: column; /* Stack sections vertically */
   }
 
   .resume .resume_left,
   .resume .resume_right {
     width: 100%; /* Take full width */
-    flex-wrap: nowrap; /* Avoid horizontal scroll */
   }
 
   .resume .resume_left {
-    padding: 15px 20px;
+    padding: 20px;
+  }
+
+  .resume .resume_left .resume_profile {
+    height: 200px; /* Adjust profile height */
   }
 
   .resume .resume_right {
-    padding: 20px 20px;
+    padding: 20px;
   }
 
-  .resume .resume_left .resume_skills ul li {
-    font-size: 13px;
+  .resume .resume_right ul {
+    padding-left: 20px; /* Reduce indentation */
   }
 }
 
@@ -228,12 +230,8 @@ body {
     line-height: 20px;
   }
 
-  .resume .resume_left .resume_profile {
-    height: 200px; /* Reduce profile image size */
-  }
-
   .resume .resume_left ul li {
-    flex-direction: column; /* Stack icon and text */
+    flex-direction: column; /* Stack icon and text vertically */
     align-items: flex-start;
   }
 
@@ -242,14 +240,18 @@ body {
   }
 
   .resume .resume_right ul li .date {
-    font-size: 14px; /* Adjust text size */
+    font-size: 14px; /* Adjust date font size */
   }
 
   .resume .resume_right ul li .info {
     margin-bottom: 15px;
   }
 
+  .resume .resume_left .resume_skills ul li {
+    font-size: 13px; /* Reduce font size for skills */
+  }
+
   .resume .resume_right .resume_hobby ul li {
-    font-size: 12px;
+    font-size: 12px; /* Reduce font size for hobbies */
   }
 }
