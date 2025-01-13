@@ -194,3 +194,39 @@ body {
   font-size: 14px;
   margin-bottom: 10px;
 }
+
+/* Media query for mobile screens (up to 768px width) */
+@media (max-width: 768px) {
+
+    /* Adjust the main container to stack vertically */
+    .resume-container {
+        flex-direction: column; /* Stack left and right panes vertically */
+        max-width: 100%; /* Use full width of the screen */
+        border: none; /* Optional: remove the border for a cleaner look on mobile */
+    }
+
+    /* Adjust the left pane to take full width */
+    .left-pane {
+        width: 100%; /* Full width for better readability on mobile */
+        padding: 20px; 
+        text-align: center; 
+    }
+
+    /* Adjust the right pane to take full width */
+    .right-pane {
+        width: 100%; /* Full width for content */
+        padding: 20px;
+    }
+
+    /* Make the profile image smaller */
+    .profile-img {
+        width: 70px; /* Smaller image for mobile */
+    }
+
+    /* Center the download button and adjust padding */
+    .download-btn {
+        width: 100%; /* Full-width button for easier clicking */
+        text-align: center;
+        padding: 15px;
+    }
+}
