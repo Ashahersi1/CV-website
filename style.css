@@ -9,7 +9,7 @@
 }
 
 body {
-  background: #eaeaea; /* Subtle background to contrast with sections */
+  background: #eaeaea; /* Subtle background */
   font-size: 14px;
   line-height: 22px;
   color: #333333; /* Darker text for readability */
@@ -27,37 +27,46 @@ body {
 }
 
 .resume {
-  width: 800px;
-  height: auto;
+  width: 90%; /* Flexible width */
+  max-width: 800px;
+  margin: 30px auto; /* Reduced margin for smaller screens */
   display: flex;
-  margin: 50px auto;
+  flex-wrap: wrap; /* Allow wrapping for smaller devices */
+  gap: 20px; /* Space between left and right sections */
+}
+
+.resume .resume_left,
+.resume .resume_right {
+  padding: 20px;
+  border-radius: 8px; /* Slightly rounded corners for a modern look */
 }
 
 .resume .resume_left {
-  width: 280px;
+  width: 100%; /* Full width for smaller screens */
+  max-width: 280px;
   background: #3a3a3a; /* Professional dark gray */
   color: #ffffff; /* White text for contrast */
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Push content apart */
 }
 
 .resume .resume_left .resume_profile {
   width: 100%;
-  height: 280px;
+  height: 200px; /* Scaled down for smaller screens */
 }
 
 .resume .resume_left .resume_profile img {
   width: 100%;
   height: 100%;
+  border-radius: 8px; /* Rounded corners for profile image */
 }
 
 .resume .resume_left .resume_content {
-  padding: 25px;
+  padding: 15px 20px;
 }
 
 .resume .title {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .resume .resume_left .bold {
@@ -69,8 +78,8 @@ body {
 }
 
 .resume .resume_item {
-  padding: 25px 0;
-  border-bottom: 1px solid #cccccc; /* Lighter divider */
+  padding: 15px 0;
+  border-bottom: 1px solid #cccccc;
 }
 
 .resume .resume_left .resume_item:last-child {
@@ -81,6 +90,7 @@ body {
   display: flex;
   margin-bottom: 10px;
   align-items: center;
+  gap: 10px; /* Space between icon and text */
 }
 
 .resume .resume_left ul li:last-child {
@@ -88,64 +98,45 @@ body {
 }
 
 .resume .resume_left ul li .icon {
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   background: #ffffff;
   color: #3a3a3a; /* Matches the background */
   border-radius: 50%;
-  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 16px;
-  position: relative;
-}
-
-.resume .icon i,
-.resume .resume_right .resume_hobby ul li i {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .resume .resume_left ul li .data {
   color: #cccccc;
 }
 
-/* Updated skills section */
 .resume .resume_left .resume_skills ul {
   padding: 0;
 }
 
 .resume .resume_left .resume_skills ul li {
-  margin-bottom: 15px; /* Space between skills */
+  margin-bottom: 10px; /* Reduced space for tighter fit */
   font-size: 14px;
-  color: #ffffff; /* Matches text color */
+  color: #ffffff;
   font-weight: 500;
-  line-height: 1.5; /* Better readability */
+  line-height: 1.5;
 }
 
-/* Social section moved to the bottom */
 .resume .resume_left .resume_social {
-  margin-top: auto; /* Pushes the social section to the bottom */
-  padding: 25px;
-  border-top: 1px solid #cccccc; /* Add a divider above */
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 1px solid #cccccc;
 }
 
 /* Right section */
 .resume .resume_right {
-  width: 520px;
-  background: #ffffff; /* White background for content */
-  padding: 25px;
-  color: #333333; /* Dark text for readability */
-}
-
-.resume .resume_right .bold {
-  color: #3a3a3a; /* Matches left section's dark gray */
-}
-
-.resume .resume_right .resume_work ul,
-.resume .resume_right .resume_education ul {
-  padding-left: 40px;
-  overflow: hidden;
+  width: calc(100% - 300px); /* Flexible width */
+  max-width: 520px;
+  background: #ffffff;
+  color: #333333;
 }
 
 .resume .resume_right ul li {
@@ -153,13 +144,13 @@ body {
 }
 
 .resume .resume_right ul li .date {
-  font-size: 16px;
+  font-size: 14px; /* Adjusted for smaller screens */
   font-weight: 500;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .resume .resume_right ul li .info {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .resume .resume_right ul li:last-child .info {
@@ -171,11 +162,11 @@ body {
   content: "";
   position: absolute;
   top: 5px;
-  left: -25px;
+  left: -15px;
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  border: 2px solid #3a3a3a; /* Matches the left section */
+  border: 2px solid #3a3a3a;
 }
 
 .resume .resume_right .resume_work ul li:after,
@@ -183,14 +174,86 @@ body {
   content: "";
   position: absolute;
   top: 14px;
-  left: -21px;
+  left: -13px;
   width: 2px;
-  height: 115px;
-  background: #3a3a3a; /* Matches the left section */
+  height: 90px; /* Adjusted for tighter spacing */
+  background: #3a3a3a;
 }
 
-/* General improvements */
 .resume .resume_right .resume_hobby ul li {
   font-size: 14px;
   margin-bottom: 10px;
+}
+
+/* ============================
+   Responsive Design
+============================ */
+@media screen and (max-width: 768px) {
+  .resume {
+    flex-direction: column; /* Stack left and right sections */
+    gap: 30px; /* Increased spacing for better readability */
+  }
+
+  .resume .resume_left,
+  .resume .resume_right {
+    width: 100%; /* Full width for mobile */
+  }
+
+  .resume .resume_left {
+    margin-bottom: 20px; /* Add space below left section */
+  }
+
+  .resume .resume_left .resume_profile {
+    height: 180px; /* Scaled down for tablets */
+  }
+
+  .resume .resume_right ul li .date {
+    font-size: 12px; /* Smaller text for dates */
+  }
+
+  .resume .resume_right ul li .info {
+    margin-bottom: 10px;
+  }
+
+  .resume .resume_left ul li {
+    flex-direction: column; /* Stack icon and text */
+    align-items: flex-start;
+  }
+
+  .resume .resume_left ul li .icon {
+    margin-bottom: 8px; /* Add spacing for stacked layout */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 12px; /* Smaller text size for compact screens */
+    line-height: 18px; /* Adjusted for readability */
+  }
+
+  .resume {
+    width: 95%; /* Maximize width */
+    gap: 15px; /* Reduced spacing */
+  }
+
+  .resume .resume_left .resume_skills ul li,
+  .resume .resume_right .resume_hobby ul li {
+    font-size: 12px; /* Smaller font size for tighter fit */
+  }
+
+  .resume .resume_right ul {
+    padding-left: 10px; /* Reduce indentation for mobile */
+  }
+
+  .resume .resume_right ul li .date {
+    font-size: 11px; /* Smaller font size */
+  }
+
+  .resume .resume_right ul li .info {
+    margin-bottom: 8px; /* Tighter spacing */
+  }
+
+  .resume .resume_left .resume_profile {
+    height: 150px; /* Reduce profile image size */
+  }
 }
